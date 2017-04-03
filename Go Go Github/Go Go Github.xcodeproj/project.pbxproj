@@ -13,8 +13,8 @@
 		713F85551E92B0B3008ECC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713F85531E92B0B3008ECC01 /* LaunchScreen.storyboard */; };
 		713F855D1E92C90F008ECC01 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F855C1E92C90F008ECC01 /* GitHub.swift */; };
 		713F855F1E92CE5E008ECC01 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F855E1E92CE5E008ECC01 /* GitHubAuthController.swift */; };
-		713F85611E92EB38008ECC01 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85601E92EB38008ECC01 /* Tokens.swift */; };
 		713F85631E92EC0B008ECC01 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85621E92EC0B008ECC01 /* FoundationExtensions.swift */; };
+		713F85691E9305A7008ECC01 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85681E9305A7008ECC01 /* Tokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		713F85561E92B0B3008ECC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		713F855C1E92C90F008ECC01 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		713F855E1E92CE5E008ECC01 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubAuthController.swift; path = ../GitHubAuthController.swift; sourceTree = "<group>"; };
-		713F85601E92EB38008ECC01 /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
 		713F85621E92EC0B008ECC01 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		713F85681E9305A7008ECC01 /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			children = (
 				713F85511E92B0B3008ECC01 /* Assets.xcassets */,
 				713F85561E92B0B3008ECC01 /* Info.plist */,
-				713F85601E92EB38008ECC01 /* Tokens.swift */,
+				713F85681E9305A7008ECC01 /* Tokens.swift */,
 			);
 			name = Supporting;
 			sourceTree = "<group>";
@@ -181,8 +181,8 @@
 				713F855D1E92C90F008ECC01 /* GitHub.swift in Sources */,
 				713F85631E92EC0B008ECC01 /* FoundationExtensions.swift in Sources */,
 				713F855F1E92CE5E008ECC01 /* GitHubAuthController.swift in Sources */,
+				713F85691E9305A7008ECC01 /* Tokens.swift in Sources */,
 				713F854B1E92B0B3008ECC01 /* AppDelegate.swift in Sources */,
-				713F85611E92EB38008ECC01 /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
