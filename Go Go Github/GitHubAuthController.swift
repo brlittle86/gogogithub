@@ -17,7 +17,7 @@ class GitHubAuthController: UIViewController {
         super.viewDidLoad()
         
         if (UserDefaults.standard.getAccessToken() != nil) {
-            loginButtonOutlet.isHidden = true
+            loginButtonOutlet.isEnabled = false
         }
 
     }
@@ -25,7 +25,9 @@ class GitHubAuthController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+        if (UserDefaults.standard.getAccessToken() != nil) {
+            loginButtonOutlet.isEnabled = false
+        }
     }
     
     @IBAction func printTokenPressed(_ sender: Any) {
