@@ -113,7 +113,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vxd-bD-rzY" firstAttribute="leading" secondItem="xsP-nA-l6W" secondAttribute="leading" id="4Ty-a2-WD2"/>
                             <constraint firstItem="vxd-bD-rzY" firstAttribute="centerX" secondItem="xsP-nA-l6W" secondAttribute="centerX" id="7Ti-ND-obz"/>
@@ -122,6 +122,9 @@
                             <constraint firstItem="MQg-6G-KJ4" firstAttribute="top" secondItem="vxd-bD-rzY" secondAttribute="bottom" constant="50" id="mvi-7p-TJ7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="repoTableView" destination="vxd-bD-rzY" id="zko-eE-Icq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZl-VW-ffk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

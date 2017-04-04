@@ -10,9 +10,15 @@ import UIKit
 
 class RepoViewController: UIViewController {
 
+    var repos : [Repository]?
+    
+    @IBOutlet weak var repoTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.repoTableView.dataSource = self
+        self.repoTableView.delegate = self
         // Do any additional setup after loading the view.
         update()
     }
@@ -21,8 +27,23 @@ class RepoViewController: UIViewController {
         print("Update repo controller here.")
         
         GitHub.shared.getRepos { (repositories) in
-            //update tableView
+            guard let unwrappedRepos = repositories else {return}
+            self.repos = unwrappedRepos
         }
     }
 
+}
+
+extension RepoViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
 }
