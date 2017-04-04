@@ -9,15 +9,14 @@
 import Foundation
 
 class Repository {
-    let name : String
+    let name : String?
     let description : String?
     let language : String?
     
     init?(json: [String : Any]) {
-        print("Complete this for lab!")
-        
-        print(json)
-        
-        return nil
+        self.name = json["name"] as? String
+        self.description = json["description"] as? String
+        self.language = json["language"] as? String
+
     }
 }
