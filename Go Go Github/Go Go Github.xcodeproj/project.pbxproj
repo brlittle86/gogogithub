@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		713F854B1E92B0B3008ECC01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F854A1E92B0B3008ECC01 /* AppDelegate.swift */; };
-		713F854D1E92B0B3008ECC01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F854C1E92B0B3008ECC01 /* ViewController.swift */; };
 		713F85501E92B0B3008ECC01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713F854E1E92B0B3008ECC01 /* Main.storyboard */; };
 		713F85521E92B0B3008ECC01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713F85511E92B0B3008ECC01 /* Assets.xcassets */; };
 		713F85551E92B0B3008ECC01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713F85531E92B0B3008ECC01 /* LaunchScreen.storyboard */; };
+		713F855D1E92C90F008ECC01 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F855C1E92C90F008ECC01 /* GitHub.swift */; };
+		713F855F1E92CE5E008ECC01 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F855E1E92CE5E008ECC01 /* GitHubAuthController.swift */; };
+		713F85631E92EC0B008ECC01 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85621E92EC0B008ECC01 /* FoundationExtensions.swift */; };
+		713F85691E9305A7008ECC01 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85681E9305A7008ECC01 /* Tokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		713F85471E92B0B3008ECC01 /* Go Go Github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Go Go Github.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		713F854A1E92B0B3008ECC01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		713F854C1E92B0B3008ECC01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		713F854F1E92B0B3008ECC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		713F85511E92B0B3008ECC01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713F85541E92B0B3008ECC01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		713F85561E92B0B3008ECC01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713F855C1E92C90F008ECC01 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
+		713F855E1E92CE5E008ECC01 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubAuthController.swift; path = ../GitHubAuthController.swift; sourceTree = "<group>"; };
+		713F85621E92EC0B008ECC01 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		713F85681E9305A7008ECC01 /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		713F85491E92B0B3008ECC01 /* Go Go Github */ = {
 			isa = PBXGroup;
 			children = (
-				713F854A1E92B0B3008ECC01 /* AppDelegate.swift */,
-				713F854C1E92B0B3008ECC01 /* ViewController.swift */,
-				713F854E1E92B0B3008ECC01 /* Main.storyboard */,
-				713F85511E92B0B3008ECC01 /* Assets.xcassets */,
-				713F85531E92B0B3008ECC01 /* LaunchScreen.storyboard */,
-				713F85561E92B0B3008ECC01 /* Info.plist */,
+				713F85661E92FCFE008ECC01 /* Controller */,
+				713F85651E92FCF8008ECC01 /* View */,
+				713F85641E92FCF1008ECC01 /* Model */,
+				713F85671E92FDE2008ECC01 /* Supporting */,
 			);
 			path = "Go Go Github";
+			sourceTree = "<group>";
+		};
+		713F85641E92FCF1008ECC01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				713F855C1E92C90F008ECC01 /* GitHub.swift */,
+				713F85621E92EC0B008ECC01 /* FoundationExtensions.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		713F85651E92FCF8008ECC01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				713F854E1E92B0B3008ECC01 /* Main.storyboard */,
+				713F85531E92B0B3008ECC01 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		713F85661E92FCFE008ECC01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				713F854A1E92B0B3008ECC01 /* AppDelegate.swift */,
+				713F855E1E92CE5E008ECC01 /* GitHubAuthController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		713F85671E92FDE2008ECC01 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				713F85511E92B0B3008ECC01 /* Assets.xcassets */,
+				713F85561E92B0B3008ECC01 /* Info.plist */,
+				713F85681E9305A7008ECC01 /* Tokens.swift */,
+			);
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713F854D1E92B0B3008ECC01 /* ViewController.swift in Sources */,
+				713F855D1E92C90F008ECC01 /* GitHub.swift in Sources */,
+				713F85631E92EC0B008ECC01 /* FoundationExtensions.swift in Sources */,
+				713F855F1E92CE5E008ECC01 /* GitHubAuthController.swift in Sources */,
+				713F85691E9305A7008ECC01 /* Tokens.swift in Sources */,
 				713F854B1E92B0B3008ECC01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

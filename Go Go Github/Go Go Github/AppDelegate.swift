@@ -18,6 +18,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let code = try? GitHub.shared.getCodeFrom(url: url)
+        
+        print(code as Any)
+        
+        if UserDefaults.standard.getAccessToken() == nil {
+            GitHub.shared.tokenRequestFor(url: url, saveOptions: .UserDefaults(UserDefaults.standard.getAccessToken())) { (saveOptions, success) in
+                
+                if success {
+                    print("Yay! Access Token!")
+                } else {
+                    print("Bummer! No success.")
+                }
+                
+            }
+        } else {
+            print("Already got the token!")
+        }
+        
+        return true
+        
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
