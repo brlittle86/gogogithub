@@ -58,6 +58,10 @@
                             <constraint firstItem="e6B-yl-Dm6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vgf-HW-1Ja"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButtonOutlet" destination="k1D-P5-Vqr" id="0Zt-5H-Rzh"/>
+                        <outlet property="loginHeightConstraint" destination="dic-sH-387" id="fCy-cz-ba6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

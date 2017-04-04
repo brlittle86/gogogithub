@@ -25,17 +25,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(code as Any)
         
-        GitHub.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
-            
-            if success {
-                print("Yay! Access Token!")
-            } else {
-                print("Bummer! No success.")
+        if UserDefaults.standard.getAccessToken() == nil {
+            GitHub.shared.tokenRequestFor(url: url, saveOptions: .UserDefaults(UserDefaults.standard.getAccessToken())) { (saveOptions, success) in
+                
+                if success {
+                    print("Yay! Access Token!")
+                } else {
+                    print("Bummer! No success.")
+                }
+                
             }
-            
+        } else {
+            print("Already got the token!")
         }
         
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -11,14 +11,14 @@ import UIKit
 let kOAuthBaseURLString = "https://github.com/login/oauth/"
 
 
-typealias GitHubOAuthCompletion = (Bool)->()
+typealias GitHubOAuthCompletion = (SaveOptions, Bool)->()
 
 enum GitHubAuthError : Error {
     case extractingCode
 }
 
 enum SaveOptions {
-    case userDefaults
+    case UserDefaults(String?)
 }
 
 
@@ -57,7 +57,7 @@ class GitHub {
         
         func complete(success: Bool) {
             OperationQueue.main.addOperation {
-                completion(success)
+                completion(saveOptions, success)
             }
         }
         
@@ -76,11 +76,11 @@ class GitHub {
                     
                     guard let data = data else { complete(success: false); return }
                     
-                    if let dataString = String(data: data, encoding: .utf8) {
-                        print(dataString)
-                        
-                        complete(success: true)
-                    }
+                    guard let dataString = String(data: data, encoding: .utf8) else { complete(success: false); return }
+                    
+                    guard let accessToken = dataString.components(separatedBy: "&").first?.components(separatedBy: "=").last else { complete(success: false); return }
+                    
+                    UserDefaults.standard.save(accessToken: accessToken)
                     
                 }).resume()
                 
