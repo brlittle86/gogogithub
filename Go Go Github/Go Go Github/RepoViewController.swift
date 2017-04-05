@@ -45,13 +45,31 @@ class RepoViewController: UIViewController {
             
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == RepoDetailViewController.identifier {
+            segue.destination.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
+        }
+    }
 
 }
 
+//MARK: RepoViewController Transitioning Delegate
+extension RepoDetailViewController : UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return CustomTransition(duration: 1.0)
+
+    }
+}
+
+//MARK: RepoViewController Delegate and DataSource
 extension RepoViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Hooray")
+        self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
