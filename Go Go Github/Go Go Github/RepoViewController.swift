@@ -10,20 +10,24 @@ import UIKit
 
 class RepoViewController: UIViewController {
 
-    var repos = [Repository]()
+    var repos = [Repository]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
-    @IBOutlet weak var repoTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
  
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.repoTableView.dataSource = self
-        self.repoTableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         
-        self.repoTableView.estimatedRowHeight = 50
-        self.repoTableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 50
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         // Do any additional setup after loading the view.
         update()
     }
@@ -36,6 +40,7 @@ class RepoViewController: UIViewController {
             
             OperationQueue.main.addOperation {
                 self.repos = unwrappedRepos
+                print(self.repos.count)
             }
             
         }
@@ -44,6 +49,7 @@ class RepoViewController: UIViewController {
 }
 
 extension RepoViewController : UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Hooray")
     }
@@ -54,15 +60,9 @@ extension RepoViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        print(RepoTableViewCell.identifier)
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell
-            .identifier, for: indexPath) as! RepoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
         let repo = self.repos[indexPath.row]
-        
-        print("Inside of RepoViewController")
-        print(repo.name as Any)
         
         cell.repoTableCellLabel.text = repo.name
         

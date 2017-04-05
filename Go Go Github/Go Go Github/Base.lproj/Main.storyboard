@@ -93,7 +93,7 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoTableCell" textLabel="2Us-bj-ycB" style="IBUITableViewCellStyleDefault" id="ueH-IW-ctN" customClass="RepoTableViewCell" customModule="Go_Go_Github" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepoTableViewCell" textLabel="2Us-bj-ycB" style="IBUITableViewCellStyleDefault" id="ueH-IW-ctN" customClass="RepoTableViewCell" customModule="Go_Go_Github" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ueH-IW-ctN" id="gGS-HQ-sPI">
@@ -126,7 +126,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="repoTableView" destination="vxd-bD-rzY" id="zko-eE-Icq"/>
+                        <outlet property="tableView" destination="vxd-bD-rzY" id="3xU-cj-lq8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZl-VW-ffk" userLabel="First Responder" sceneMemberID="firstResponder"/>
