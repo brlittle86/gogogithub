@@ -130,7 +130,7 @@
                                     <navigationItem id="vSB-Q6-3fO">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xBV-ET-tnw">
                                             <connections>
-                                                <segue destination="IeR-CN-5NY" kind="show" id="0AD-bH-WLf"/>
+                                                <action selector="closeDetailController:" destination="fo0-d3-KdD" id="BK9-QY-zbq"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -205,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02B-km-ccH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2008.8" y="136.28185907046478"/>
+            <point key="canvasLocation" x="2116" y="137"/>
         </scene>
     </scenes>
     <resources>

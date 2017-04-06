@@ -17,6 +17,11 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var repoDetailFork: UILabel!
     @IBOutlet weak var repoDetailCreated: UILabel!
     
+    @IBAction func closeDetailController(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
     var repo : Repository!
 
     override func viewDidLoad() {
