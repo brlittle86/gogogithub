@@ -21,7 +21,7 @@ class Repository {
         self.description = json["description"] as? String ?? "No description"
         self.language = json["language"] as? String ?? "Undefined language"
         self.stars = json["stargazers_count"] as? String ?? "No Stars"
-        self.createdAt = json["created_at"] as? String
+        self.createdAt = (json["created_at"] as? String)?.components(separatedBy: "T").first
         self.forked = json["fork"] as? Bool
         
     }

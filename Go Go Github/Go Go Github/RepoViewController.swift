@@ -36,14 +36,12 @@ class RepoViewController: UIViewController {
     }
     
     func update() {
-        print("Update repo controller here.")
-        
+
         GitHub.shared.getRepos { (repositories) in
             guard let unwrappedRepos = repositories else {return}
             
             OperationQueue.main.addOperation {
                 self.repos = unwrappedRepos
-                print(self.repos.count)
             }
             
         }
