@@ -11,5 +11,7 @@ import UIKit
 class RepoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var repoTableCellLabel: UILabel!
+    @IBOutlet weak var repoDescriptionLabel: UILabel!
+    @IBOutlet weak var repoLanguageLabel: UILabel!
 
 }
