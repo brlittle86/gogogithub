@@ -21,6 +21,7 @@
 		713F85711E945FDB008ECC01 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85701E945FDB008ECC01 /* RepoTableViewCell.swift */; };
 		713F85731E956E7E008ECC01 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85721E956E7E008ECC01 /* RepoDetailViewController.swift */; };
 		713F85751E95706D008ECC01 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85741E95706D008ECC01 /* CustomTransition.swift */; };
+		713F85771E959B7B008ECC01 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713F85761E959B7B008ECC01 /* RepoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		713F85701E945FDB008ECC01 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		713F85721E956E7E008ECC01 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		713F85741E95706D008ECC01 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		713F85761E959B7B008ECC01 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		713F85651E92FCF8008ECC01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				713F85761E959B7B008ECC01 /* RepoTableViewCell.xib */,
 				713F854E1E92B0B3008ECC01 /* Main.storyboard */,
 				713F85531E92B0B3008ECC01 /* LaunchScreen.storyboard */,
 			);
@@ -186,6 +189,7 @@
 				713F85551E92B0B3008ECC01 /* LaunchScreen.storyboard in Resources */,
 				713F85521E92B0B3008ECC01 /* Assets.xcassets in Resources */,
 				713F85501E92B0B3008ECC01 /* Main.storyboard in Resources */,
+				713F85771E959B7B008ECC01 /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

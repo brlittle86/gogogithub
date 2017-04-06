@@ -26,21 +26,22 @@ class RepoViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        self.tableView.estimatedRowHeight = 50
+        self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        // Do any additional setup after loading the view.
+        
+        let nib = UINib(nibName: RepoTableViewCell.identifier, bundle: Bundle.main)
+        self.tableView.register(nib, forCellReuseIdentifier: RepoTableViewCell.identifier)
+        
         update()
     }
     
     func update() {
-        print("Update repo controller here.")
-        
+
         GitHub.shared.getRepos { (repositories) in
             guard let unwrappedRepos = repositories else {return}
             
             OperationQueue.main.addOperation {
                 self.repos = unwrappedRepos
-                print(self.repos.count)
             }
             
         }
@@ -50,6 +51,11 @@ class RepoViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         
         if segue.identifier == RepoDetailViewController.identifier {
+            if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
+                let selectedRepo = self.repos[selectedIndex]
+                guard let destinationController = segue.destination as? RepoDetailViewController else {return}
+                destinationController.repo = selectedRepo
+            }
             segue.destination.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
         }
     }
@@ -81,8 +87,11 @@ extension RepoViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.identifier, for: indexPath) as! RepoTableViewCell
         
         let repo = self.repos[indexPath.row]
-        
+
         cell.repoTableCellLabel.text = repo.name
+        cell.repoDescriptionLabel.text = repo.description
+        cell.repoLanguageLabel.text = repo.language
+
         
         return cell
     }
