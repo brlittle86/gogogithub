@@ -22,6 +22,7 @@
 		713F85731E956E7E008ECC01 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85721E956E7E008ECC01 /* RepoDetailViewController.swift */; };
 		713F85751E95706D008ECC01 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85741E95706D008ECC01 /* CustomTransition.swift */; };
 		713F85771E959B7B008ECC01 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713F85761E959B7B008ECC01 /* RepoTableViewCell.xib */; };
+		713F85811E96B329008ECC01 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713F85801E96B329008ECC01 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		713F85721E956E7E008ECC01 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		713F85741E95706D008ECC01 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		713F85761E959B7B008ECC01 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		713F85801E96B329008ECC01 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				713F85721E956E7E008ECC01 /* RepoDetailViewController.swift */,
+				713F85801E96B329008ECC01 /* WebViewController.swift */,
 				713F856A1E940C0A008ECC01 /* RepoViewController.swift */,
 				713F85741E95706D008ECC01 /* CustomTransition.swift */,
 				713F854A1E92B0B3008ECC01 /* AppDelegate.swift */,
@@ -207,6 +210,7 @@
 				713F856F1E941952008ECC01 /* Repository.swift in Sources */,
 				713F856B1E940C0A008ECC01 /* RepoViewController.swift in Sources */,
 				713F85711E945FDB008ECC01 /* RepoTableViewCell.swift in Sources */,
+				713F85811E96B329008ECC01 /* WebViewController.swift in Sources */,
 				713F855F1E92CE5E008ECC01 /* GitHubAuthController.swift in Sources */,
 				713F85731E956E7E008ECC01 /* RepoDetailViewController.swift in Sources */,
 				713F85691E9305A7008ECC01 /* Tokens.swift in Sources */,

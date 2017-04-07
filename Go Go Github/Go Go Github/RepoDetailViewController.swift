@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class RepoDetailViewController: UIViewController {
     
@@ -20,6 +21,32 @@ class RepoDetailViewController: UIViewController {
     @IBAction func closeDetailController(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func viewPagePressed(_ sender: Any) {
+        
+        presentSafariViewControllerWith(urlString: repo.repoURLString)
+//        presentWebViewControllerWith(urlString: repo.repoURLString)
+        
+    }
+    
+    func presentWebViewControllerWith(urlString: String) {
+        
+        let webController = WebViewController()
+        webController.url = urlString
+        
+        self.present(webController, animated: true, completion: nil)
+    }
+    
+    func presentSafariViewControllerWith(urlString: String) {
+        
+        guard let url = URL(string: urlString) else { return }
+        
+        let safariController = SFSafariViewController(url: url)
+        
+        self.present(safariController, animated: true, completion: nil)
+        
+        
     }
     
     var repo : Repository!

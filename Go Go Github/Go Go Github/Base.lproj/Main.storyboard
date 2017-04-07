@@ -166,6 +166,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="od0-X7-qF1">
+                                <rect key="frame" x="151" y="318" width="72" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="View Page"/>
+                                <connections>
+                                    <action selector="viewPagePressed:" destination="fo0-d3-KdD" eventType="touchUpInside" id="K7y-Du-9U9"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPM-Kj-Bb0">
                                 <rect key="frame" x="8" y="166.5" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
@@ -179,6 +187,7 @@
                             <constraint firstItem="mPM-Kj-Bb0" firstAttribute="leading" secondItem="bmP-Jo-HdO" secondAttribute="leading" constant="8" id="83r-NU-oGb"/>
                             <constraint firstItem="kuo-8J-2LI" firstAttribute="top" secondItem="uBD-3d-Sg0" secondAttribute="bottom" constant="16" id="9fP-V3-D4Y"/>
                             <constraint firstItem="uBD-3d-Sg0" firstAttribute="leading" secondItem="bmP-Jo-HdO" secondAttribute="leading" id="BOa-Ln-n4J"/>
+                            <constraint firstItem="od0-X7-qF1" firstAttribute="centerX" secondItem="bmP-Jo-HdO" secondAttribute="centerX" id="Byp-UU-gLa"/>
                             <constraint firstItem="kuo-8J-2LI" firstAttribute="leading" secondItem="bmP-Jo-HdO" secondAttribute="leading" constant="8" id="CtX-5E-a1N"/>
                             <constraint firstAttribute="trailing" secondItem="KHi-CL-FwU" secondAttribute="trailing" constant="8" id="OU1-r4-JAy"/>
                             <constraint firstAttribute="trailing" secondItem="BW1-w7-mWt" secondAttribute="trailing" constant="8" id="Usu-kH-YHz"/>
@@ -188,6 +197,7 @@
                             <constraint firstItem="fID-6o-I0k" firstAttribute="top" secondItem="kuo-8J-2LI" secondAttribute="bottom" constant="24" id="boK-Ow-LRJ"/>
                             <constraint firstItem="gVj-FZ-H5E" firstAttribute="leading" secondItem="bmP-Jo-HdO" secondAttribute="leading" constant="8" id="cWN-xO-Gap"/>
                             <constraint firstItem="uBD-3d-Sg0" firstAttribute="centerX" secondItem="kuo-8J-2LI" secondAttribute="centerX" id="cny-pK-cpZ"/>
+                            <constraint firstItem="od0-X7-qF1" firstAttribute="centerY" secondItem="bmP-Jo-HdO" secondAttribute="centerY" id="jYs-i8-Pra"/>
                             <constraint firstItem="uBD-3d-Sg0" firstAttribute="top" secondItem="bmP-Jo-HdO" secondAttribute="top" constant="20" id="lLu-fe-DWe"/>
                             <constraint firstItem="gVj-FZ-H5E" firstAttribute="top" secondItem="fID-6o-I0k" secondAttribute="bottom" constant="32" id="lOZ-Gz-hgP"/>
                             <constraint firstItem="BW1-w7-mWt" firstAttribute="top" secondItem="kuo-8J-2LI" secondAttribute="bottom" constant="8" id="qlr-E2-xNj"/>
