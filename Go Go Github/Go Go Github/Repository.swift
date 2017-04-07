@@ -16,6 +16,8 @@ class Repository {
     let createdAt : String?
     let forked : Bool?
     
+    let repoURLString : String
+    
     init?(json: [String : Any]) {
         self.name = json["name"] as? String ?? "No name"
         self.description = json["description"] as? String ?? "No description"
@@ -23,6 +25,8 @@ class Repository {
         self.stars = json["stargazers_count"] as? String ?? "No Stars"
         self.createdAt = (json["created_at"] as? String)?.components(separatedBy: "T").first
         self.forked = json["fork"] as? Bool
+        
+        self.repoURLString = json["html_url"] as? String ?? "https://www.github.com"
         
     }
 }
